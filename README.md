@@ -4,4 +4,4 @@
 [Portfolio](https://luiggy-new-portfolio.netlify.app/)
 
 ## Preview
-![](/assets/preview.jpeg)
+![](src/assets/preview.jpeg)
