@@ -1,7 +1,7 @@
 export const projects = [
   {
     name: "Chat App",
-    url: "https://front-chat-fb71n2dzb-lgcarlinf.vercel.app/",
+    url: "https://chat-luiggy.vercel.app/login",
     img: "./img/login.jpeg",
   },
   {
