@@ -71,7 +71,7 @@ const Header = () => {
           </a>
           <div className="profile__buttons-small">
             <a
-              href="https://api.whatsapp.com/send?phone=51942075166&text=Hola ,necesito informacion"
+              href="https://api.whatsapp.com/send?phone=51994266065&text=Hola ,necesito informacion"
               target="_blank"
               className="button button__small button__gray"
             >
