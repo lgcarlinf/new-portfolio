@@ -27,20 +27,26 @@ const Header = () => {
           <h3 className="profile__profession">Frontend Developer</h3>
 
           <ul className="profile__social">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/luiggycf/"
+                target="_blank"
+                className="profile__social-link"
+                aria-label="Linkedin"
+              >
+                <i className="ri-linkedin-box-line"></i>
+              </a>
+            </li>
+           <li>
             <a
-              href="https://www.linkedin.com/in/luiggycf/"
-              target="_blank"
-              className="profile__social-link"
-            >
-              <i className="ri-linkedin-box-line"></i>
-            </a>
-            <a
-              href="https://github.com/lgcarlinf"
-              target="_blank"
-              className="profile__social-link"
-            >
-              <i className="ri-github-line"></i>
-            </a>
+                href="https://github.com/lgcarlinf"
+                target="_blank"
+                className="profile__social-link"
+                aria-label="Github"
+              >
+                <i className="ri-github-line"></i>
+              </a>
+           </li>
           </ul>
         </div>
 
@@ -65,7 +71,7 @@ const Header = () => {
           </div>
         </div>
         <div className="profile__buttons">
-          <a download="" href="./files/luiggycv.pdf" className="button">
+          <a download="" href="./files/luiggycv.pdf" className="button" aria-label='curriculum vitae'>
             Download CV
             <i className="ri-download-line"></i>
           </a>
@@ -74,6 +80,7 @@ const Header = () => {
               href="https://api.whatsapp.com/send?phone=51994266065&text=Hola ,necesito informacion"
               target="_blank"
               className="button button__small button__gray"
+              aria-label="Whatsapp"
             >
               <i className="ri-whatsapp-line"></i>
             </a>
@@ -81,6 +88,7 @@ const Header = () => {
               href="https://m.me/Luiguuii"
               target="_blank"
               className="button button__small button__gray"
+              aria-label="Messenger"
             >
               <i className="ri-messenger-line"></i>
             </a>

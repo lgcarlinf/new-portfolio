@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <main className="main">
       <section className="filters container">
-        <ul className="filters__content">
+        <div className="filters__content">
           <button
             className={`${
               active == 1 ? "filters__button-active" : ""
@@ -26,7 +26,7 @@ const Main = () => {
           >
             Skills
           </button>
-        </ul>
+        </div>
         <div className="filters__sections">
           {active == 1 && (
             <>
@@ -46,6 +46,7 @@ const Main = () => {
                           href={url}
                           target="_blank"
                           className="projects__button button button__small"
+                          aria-label="Project Link"
                         >
                           <i className="ri-link"></i>
                         </a>
@@ -54,7 +55,7 @@ const Main = () => {
                   </article>
                 ))}
                 <div className="projects__more">
-                  <a href="https://github.com/lgcarlinf" target="_blank">
+                  <a href="https://github.com/lgcarlinf" target="_blank" aria-label="more projects">
                     More Projects
                   </a>
                 </div>
