@@ -1,6 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import "./scss/App.scss";
-import "remixicon/fonts/remixicon.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import ThemeContext from "./context/ThemeProvider";
