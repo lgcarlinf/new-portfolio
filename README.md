@@ -1,7 +1,7 @@
 # Portfolio 
 ### Hecho con React y Sass
 -Link:
-[Portfolio](https://luiggy-new-portfolio.netlify.app/)
+[Portfolio](https://www.luiggydev.site/)
 
 ## Preview
 ![](src/assets/preview.jpeg)
