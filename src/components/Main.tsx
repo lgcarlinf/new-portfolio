@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { projects } from "../utils/projects";
 import { skillsBackend, skillsFrontend } from "../utils/skils";
 
@@ -10,18 +10,16 @@ const Main = () => {
       <section className="filters container">
         <div className="filters__content">
           <button
-            className={`${
-              active == 1 ? "filters__button-active" : ""
-            } filters__button`}
+            className={`${active == 1 ? "filters__button-active" : ""
+              } filters__button`}
             data-target="#projects"
             onClick={() => setActive(1)}
           >
             Projects
           </button>
           <button
-            className={`${
-              active == 2 ? "filters__button-active" : ""
-            } filters__button`}
+            className={`${active == 2 ? "filters__button-active" : ""
+              } filters__button`}
             onClick={() => setActive(2)}
           >
             Skills

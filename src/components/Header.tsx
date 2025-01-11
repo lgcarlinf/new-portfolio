@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import ThemeContext from "../context/ThemeProvider";
 
 const Header = () => {
@@ -37,8 +37,8 @@ const Header = () => {
                 <i className="ri-linkedin-box-line"></i>
               </a>
             </li>
-           <li>
-            <a
+            <li>
+              <a
                 href="https://github.com/lgcarlinf"
                 target="_blank"
                 className="profile__social-link"
@@ -46,7 +46,7 @@ const Header = () => {
               >
                 <i className="ri-github-line"></i>
               </a>
-           </li>
+            </li>
           </ul>
         </div>
 

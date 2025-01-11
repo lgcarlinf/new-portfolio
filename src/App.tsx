@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import ThemeContext from "./context/ThemeProvider";
 import ScrollReveal from "scrollreveal";
+import { THEME } from "./types";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -28,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`${theme === "dark" ? "dark-theme" : "light-theme"} App`}>
+    <div className={`${theme === THEME.DARK ? "dark-theme" : "light-theme"} App`}>
       <Header />
       <Main />
     </div>

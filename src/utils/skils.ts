@@ -1,4 +1,6 @@
-export const skillsFrontend = [
+import { Skills } from "../types";
+
+export const skillsFrontend: Skills[] = [
   { name: "Html", level: "intermediate" },
   { name: "Css", level: "intermediate" },
   { name: "Sass", level: "Intermediate" },
@@ -9,7 +11,7 @@ export const skillsFrontend = [
   { name: "NextJs", level: "intermediate" },
 ];
 
-export const skillsBackend = [
+export const skillsBackend: Skills[] = [
   { name: "PHP", level: "Basic" },
   { name: "Python", level: "Basic" },
   { name: "NodeJs", level: "intermediate" },
