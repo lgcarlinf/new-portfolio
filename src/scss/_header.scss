@@ -1,3 +1,5 @@
+@use "variables";
+
 .profile {
   padding-top: 3.5rem;
 }
@@ -27,19 +29,19 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 3.5px solid $first-color;
+  border: 3.5px solid variables.$first-color;
   display: grid;
   place-items: center;
   margin-bottom: 0.75rem;
 }
 
 .profile__name {
-  font-size: var($h2-font-size);
-  color: $title-color;
+  font-size: var(variables.$h2-font-size);
+  color: variables.$title-color;
 }
 
 .profile__profession {
-  font-size: var($smaller-font-size);
+  font-size: var(variables.$smaller-font-size);
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -52,11 +54,11 @@
 
 .profile__social-link {
   font-size: 1.25rem;
-  color: $title-color;
+  color: variables.$title-color;
   transition: 0.3s;
 
   &:hover {
-    color: $first-color;
+    color: variables.$first-color;
   }
 }
 
@@ -71,12 +73,12 @@
 }
 
 .profile__info-number {
-  font-size: $normal-font-size;
+  font-size: variables.$normal-font-size;
   margin-bottom: 0.25rem;
 }
 
 .profile__info-description {
-  font-size: $smaller-font-size;
+  font-size: variables.$smaller-font-size;
   font-weight: 500;
 }
 
@@ -90,6 +92,7 @@
 .profile__buttons {
   column-gap: 1rem;
 }
+
 .profile__buttons-small {
   column-gap: 0.25rem;
 }
@@ -98,19 +101,19 @@
   display: inline-flex;
   align-items: center;
   column-gap: 0.5rem;
-  background-color: $first-color;
-  color: $body-color-dark;
+  background-color: variables.$first-color;
+  color: variables.$body-color-dark;
   padding: 1.15rem 1.5rem;
   border-radius: 0.5rem;
   transition: 0.3s;
-  box-shadow: 0 8px 24px hsla($hue, $sat, $lig, 0.25);
+  box-shadow: 0 8px 24px hsla(variables.$hue, variables.$sat, variables.$lig, 0.25);
 
   i {
     font-size: 1.25rem;
   }
 
   &:hover {
-    background-color: $first-color-alt;
+    background-color: variables.$first-color-alt;
   }
 }
 
@@ -120,10 +123,10 @@
 }
 
 .button__gray {
-  background-color: $text-color-lighten;
-  color: $title-color;
+  background-color: variables.$text-color-lighten;
+  color: variables.$title-color;
 
   &:hover {
-    background-color: $text-color-light;
+    background-color: variables.$text-color-light;
   }
 }
