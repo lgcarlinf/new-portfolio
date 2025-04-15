@@ -17,7 +17,7 @@ const Header = () => {
           <div className="profile__border">
             <div className="profile__perfil">
               <img
-                src="./img/photo.jpeg"
+                src="./img/photo.webp"
                 alt="profile"
                 className="profile__img"
               />
