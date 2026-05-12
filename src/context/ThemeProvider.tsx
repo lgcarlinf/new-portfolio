@@ -3,18 +3,18 @@ import { THEME } from "../types";
 
 interface ThemeContextType {
   theme: THEME;
-  handleClick: () => void;
+  toggleTheme: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
   theme: THEME.LIGHT,
-  handleClick: () => { }
+  toggleTheme: () => { }
 });
 
 const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useState<THEME>(THEME.LIGHT);
 
-  const handleClick = () => {
+  const toggleTheme = () => {
     if (theme === THEME.LIGHT) {
       setTheme(THEME.DARK);
       localStorage.setItem("theme", THEME.DARK);
@@ -35,7 +35,7 @@ const ThemeProvider = ({ children }: PropsWithChildren) => {
   }, []);
 
   return (
-    <ThemeContext.Provider value={{ theme, handleClick }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

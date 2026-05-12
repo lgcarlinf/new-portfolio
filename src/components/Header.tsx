@@ -1,15 +1,20 @@
-import { useContext } from "react";
+import { use } from "react";
 import ThemeContext from "../context/ThemeProvider";
+import Icon from "./Icon";
 
 const Header = () => {
-  const { theme, handleClick } = useContext(ThemeContext);
+  const { theme, toggleTheme } = use(ThemeContext);
 
   return (
     <header className="profile container">
       {theme === "dark" ? (
-        <i className="ri-sun-line change-theme" onClick={handleClick}></i>
+        <button className="change-theme" onClick={toggleTheme} aria-label="Use light theme">
+          <Icon name="sun" />
+        </button>
       ) : (
-        <i className="ri-moon-line change-theme" onClick={handleClick}></i>
+        <button className="change-theme" onClick={toggleTheme} aria-label="Use dark theme">
+          <Icon name="moon" />
+        </button>
       )}
 
       <div className="profile__container grid">
@@ -17,9 +22,15 @@ const Header = () => {
           <div className="profile__border">
             <div className="profile__perfil">
               <img
-                src="./img/photo.webp"
+                src="./img/responsive/photo-240.webp"
+                srcSet="./img/responsive/photo-120.webp 120w, ./img/responsive/photo-240.webp 240w"
+                sizes="115px"
                 alt="profile"
                 className="profile__img"
+                width="115"
+                height="115"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>
@@ -34,7 +45,7 @@ const Header = () => {
                 className="profile__social-link"
                 aria-label="Linkedin"
               >
-                <i className="ri-linkedin-box-line"></i>
+                <Icon name="linkedin" />
               </a>
             </li>
             <li>
@@ -44,7 +55,7 @@ const Header = () => {
                 className="profile__social-link"
                 aria-label="Github"
               >
-                <i className="ri-github-line"></i>
+                <Icon name="github" />
               </a>
             </li>
           </ul>
@@ -73,7 +84,7 @@ const Header = () => {
         <div className="profile__buttons">
           <a download="" href="./files/luiggycv.pdf" className="button" aria-label='curriculum vitae'>
             Download CV
-            <i className="ri-download-line"></i>
+            <Icon name="download" />
           </a>
           <div className="profile__buttons-small">
             <a
@@ -82,7 +93,7 @@ const Header = () => {
               className="button button__small button__gray"
               aria-label="Whatsapp"
             >
-              <i className="ri-whatsapp-line"></i>
+              <Icon name="whatsapp" />
             </a>
             <a
               href="https://m.me/Luiguuii"
@@ -90,7 +101,7 @@ const Header = () => {
               className="button button__small button__gray"
               aria-label="Messenger"
             >
-              <i className="ri-messenger-line"></i>
+              <Icon name="messenger" />
             </a>
           </div>
         </div>

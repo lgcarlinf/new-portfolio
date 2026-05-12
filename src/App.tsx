@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { use, useEffect } from "react";
 import "./scss/App.scss";
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -7,16 +7,17 @@ import ScrollReveal from "scrollreveal";
 import { THEME } from "./types";
 
 function App() {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = use(ThemeContext);
 
-  const sr = ScrollReveal({
-    origin: "top",
-    distance: "60px",
-    duration: 2500,
-    delay: 400,
-  });
-
+  
   useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "top",
+      distance: "60px",
+      duration: 2500,
+      delay: 400,
+    });
+
     sr.reveal(`.profile__border`);
     sr.reveal(`.change-theme`);
     sr.reveal(`.profile__name`, { delay: 500 });

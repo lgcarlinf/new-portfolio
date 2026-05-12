@@ -100,6 +100,13 @@ img {
   height: auto;
 }
 
+.icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -171,6 +178,9 @@ img {
   position: absolute;
   top: 1.5rem;
   right: 25px;
+  padding: 0;
+  border: 0;
+  background: transparent;
   font-size: 1.25rem;
   color: variables.$title-color;
   cursor: pointer;

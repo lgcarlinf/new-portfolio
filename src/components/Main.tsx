@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { projects } from "../utils/projects";
 import { skillsBackend, skillsFrontend } from "../utils/skils";
+import Icon from "./Icon";
+
+const projectImageSizes = "(min-width: 576px) 332px, calc(100vw - 3rem)";
 
 const Main = () => {
   const [active, setActive] = useState(1);
@@ -33,9 +36,19 @@ const Main = () => {
                 data-caontent
                 id="projects"
               >
-                {projects.map(({ name, url, img }, i) => (
-                  <article className="projects__card" key={i}>
-                    <img src={img} alt="" className="projects__img" />
+                {projects.map(({ name, url, img, imgSet, width, height }, i) => (
+                  <article className="projects__card" key={url}>
+                    <img
+                      src={img}
+                      srcSet={imgSet}
+                      sizes={projectImageSizes}
+                      alt={name}
+                      className="projects__img"
+                      width={width}
+                      height={height}
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <div className="projects__modal">
                       <div>
                         <span className="projects__subtitle">Web</span>
@@ -46,7 +59,7 @@ const Main = () => {
                           className="projects__button button button__small"
                           aria-label="Project Link"
                         >
-                          <i className="ri-link"></i>
+                          <Icon name="link" />
                         </a>
                       </div>
                     </div>
@@ -67,9 +80,9 @@ const Main = () => {
                 <h3 className="skills__title">Frontend developer</h3>
                 <div className="skills__box">
                   <div className="skills__group">
-                    {skillsFrontend.map(({ name, level }, i) => (
-                      <div className="skills__data" key={i}>
-                        <i className="ri-checkbox-circle-line"></i>
+                    {skillsFrontend.map(({ name, level }) => (
+                      <div className="skills__data" key={name}>
+                        <Icon name="check" />
 
                         <div>
                           <h3 className="skills__name">{name}</h3>
@@ -84,9 +97,9 @@ const Main = () => {
                 <h3 className="skills__title">Backend developer</h3>
                 <div className="skills__box">
                   <div className="skills__group">
-                    {skillsBackend.map(({ name, level }, i) => (
-                      <div className="skills__data" key={i}>
-                        <i className="ri-checkbox-circle-line"></i>
+                    {skillsBackend.map(({ name, level }) => (
+                      <div className="skills__data" key={name}>
+                        <Icon name="check" />
 
                         <div>
                           <h3 className="skills__name">{name}</h3>
