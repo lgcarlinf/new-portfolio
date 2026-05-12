@@ -36,7 +36,7 @@ const Main = () => {
                 data-caontent
                 id="projects"
               >
-                {projects.map(({ name, url, img, imgSet, width, height }, i) => (
+                {projects.map(({ name, url, img, imgSet, width, height }) => (
                   <article className="projects__card" key={url}>
                     <img
                       src={img}
